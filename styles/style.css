@@ -172,7 +172,7 @@
 
 .titulo h1 {
   font-family: var(--font-titulos);
-  font-size: 3.9rem;
+  font-size: 4.5rem;
   text-align: center;
   background: var(--gold-gradient);
   -webkit-background-clip: text;
@@ -182,13 +182,14 @@
 
 .titulo h2 {
   font-family: var(--font-subtitulos);
-  font-size: 4rem;
+  font-size: 4.5rem;
   text-align: center;
   color: var(--rose-light);
   font-weight: 400;
   letter-spacing: 5px;
   margin-top: -16px;
-  text-shadow: 0 5px 6px rgb(240, 185, 255);
+  text-shadow: 0 5px 4px rgb(0, 0, 0);
+  -webkit-text-stroke: #88722dc1 1px;
 }
 
 /* -----------------------
@@ -196,6 +197,7 @@
   --------------------------*/
 .music-card {
   margin: 0 auto;
+  margin-bottom: 10%;
   background: var(--ivory-paper);
   color: var(--txt-body);
   padding: 2rem 1rem;
@@ -296,15 +298,15 @@
   margin: 0 auto;
   margin-top: 80px;
   margin-bottom: 80px;
-  background-image: url("../assets/img/fondo-info2.png");
+  background-image: url("../assets/img/fondoPergamino.jpg");
   width: calc(100% - 10%);
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
+  background-size: contain;
   position: relative;
 
-  border: 2px solid var(--rose);
-  outline: 5px solid rgba(194, 120, 165, 0.25);
+  border: 2px solid #672600;
+  outline: 5px solid rgba(137, 70, 16, 0.815);
 
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
 }
@@ -319,7 +321,7 @@
   width: 260px;
   height: 280px;
 
-  background-image: url("../assets/img/flores2.png");
+  background-image: url("../assets/img/floreslilas.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -337,7 +339,7 @@
   width: 260px;
   height: 280px;
 
-  background-image: url("../assets/img/d2fd1e5c11599e81b15746ea48d49838.png");
+  background-image: url("../assets/img/floreslilas.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -369,10 +371,9 @@
   align-items: center;
   gap: 4px;
   margin-bottom: 20px;
-  border-top: 3px solid var(--rose-main);
-  border-bottom: 3px solid var(--rose-main);
-  width: 106%;
+  width: 100%;
   padding: 10px;
+  margin-top: -20px;
 }
 
 .sub {
@@ -392,7 +393,9 @@
   color: var(--bg-color-4);
 }
 
-.info-primary p {
+.info-primary p,
+.frase-p p {
+  text-transform: uppercase;
   text-align: center;
   font-size: 1rem;
   margin-bottom: 10px;
@@ -400,22 +403,25 @@
   line-height: 1.5rem;
 }
 
-.padres {
+.padres,
+.padrinos h2 {
   margin: 0 auto;
   margin-top: -10px;
   text-align: center;
   line-height: 1.7rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
   font-family: var(--font-titulos);
 }
 
-.frase-p,
 .fecha {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
   font-size: 1rem;
   font-weight: 400;
+  line-height: 1.5rem;
 }
 
 .frase-l h1 {
@@ -442,16 +448,17 @@
   margin: 0;
   font-weight: 400;
   letter-spacing: 5px;
-  margin-top: -10px;
+  margin-top: 20px;
 }
 
 .nombre h3 {
   font-family: var(--font-titulos);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-align: center;
   margin: 0;
   font-weight: 400;
   letter-spacing: 4px;
+  margin-top: -15px;
 }
 
 .padrinos p {
@@ -460,16 +467,7 @@
   text-align: center;
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 10px;
-}
-
-.padrinos h2 {
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.7rem;
-  font-size: 1.2rem;
-  font-family: var(--font-titulos);
-  font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .dia {
@@ -571,13 +569,14 @@
 .section-place-salon {
   width: calc(100% - 30px);
   margin: 0 auto;
+  z-index: -9999;
 }
 
 .section-place::after,
 .section-place-salon::after {
   content: "";
   position: absolute;
-  top: -120px; /* qué tan abajo sobresale */
+  top: -120px;
   left: 50%;
   transform: translateX(-50%) rotate(180deg); /* gira para simetría */
   width: 200px;
@@ -774,13 +773,13 @@
   --------------------------*/
 .section-message {
   position: relative;
-  background-image: url("../assets/img/lila.jpg");
+  background-image: url("../assets/img/torreback.jpg");
   background-position: center;
   background-size: cover;
   padding: 3rem 1rem 4rem;
   overflow: hidden;
 
-  margin-top: -50px;
+  margin-top: -60px;
 }
 
 .box-message {
@@ -985,4 +984,17 @@ footer a:hover {
 
 .palabras b {
   color: var(--rose);
+}
+
+.rapunzel {
+  position: absolute;
+  width: 90px;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 15px rgba(255, 220, 150, 0.9));
+  z-index: 5;
+
+  width: 150px;
+  left: -45px;
+  top: 0px;
+  z-index: 1;
 }
