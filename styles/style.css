@@ -314,14 +314,14 @@
 .section-info::after {
   content: "";
   position: absolute;
-  top: -140px;
+  top: -110px;
   left: 50%;
   transform: translateX(-50%);
 
-  width: 260px;
-  height: 280px;
+  width: 250px;
+  height: 200px;
 
-  background-image: url("../assets/img/floreslilas.png");
+  background-image: url("../assets/img/corona.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
