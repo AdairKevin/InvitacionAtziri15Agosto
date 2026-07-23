@@ -174,7 +174,7 @@
   font-family: var(--font-titulos);
   font-size: 4.5rem;
   text-align: center;
-  background: var(--gold-gradient);
+  background: var(--gold-gradient2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
@@ -189,7 +189,7 @@
   letter-spacing: 5px;
   margin-top: -16px;
   text-shadow: 0 5px 4px rgb(0, 0, 0);
-  -webkit-text-stroke: #88722dc1 1px;
+  -webkit-text-stroke: #a87e00d4 1px;
 }
 
 /* -----------------------
@@ -992,9 +992,123 @@ footer a:hover {
   opacity: 0.85;
   filter: drop-shadow(0 0 15px rgba(255, 220, 150, 0.9));
   z-index: 5;
-
   width: 150px;
   left: -45px;
   top: 0px;
   z-index: 1;
+}
+
+.social-section {
+  width: 90%;
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* detalle decorativo */
+
+.social-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 120px;
+  height: 1px;
+  background: #c9a44c;
+  transform: translateX(-50%);
+}
+
+.social-card {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 45px 35px;
+  background: var(--rose-light); /* suave variación de fondo */
+  border: 2px solid var(--rose-main); /* borde dorado principal */
+  position: relative;
+}
+
+/* esquinas estilo invitación antigua */
+
+.social-card::before {
+  top: 12px;
+  left: 12px;
+
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.social-card::after {
+  bottom: 12px;
+  right: 12px;
+
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+
+.social-icon {
+  color: #c9a44c;
+  font-size: 30px;
+}
+
+.social-card h2 {
+  margin: 15px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: #47333f;
+}
+
+.social-card p {
+  font-family: "Montserrat", sans-serif;
+
+  color: #6e5b67;
+
+  line-height: 1.8;
+
+  font-size: 15px;
+}
+
+.instagram-user {
+  margin: 25px auto;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 22px;
+
+  color: #b08b32;
+
+  letter-spacing: 1px;
+}
+
+.social-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 30px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 14px;
+
+  color: white;
+
+  background: linear-gradient(120deg, #c9a44c, #a57c2c);
+
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  transform: translateY(-3px);
 }
